@@ -1,9 +1,8 @@
 package com.android.settings;
 
-import java.lang.System;
-
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,7 +23,7 @@ public class SettingsPassword extends Activity {
     }
 
     private static String getPassword() {
-        String pw = System.getProperty("aeris.settings.password");
+        String pw = SystemProperties.get("aeris.settings.password");
         if (pw == null) {
             return "1234567890";
         }
