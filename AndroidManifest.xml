@@ -104,14 +104,20 @@
             android:screenOrientation="nosensor">
         </activity>
 
-        <activity android:name="Settings"
-                android:taskAffinity="com.android.settings"
-                android:label="@string/settings_label_launcher"
-                android:launchMode="singleTask">
+        <activity android:name="SettingsPassword"
+                  android:taskAffinity="com.android.settings"
+                  android:label="@string/settings_label_launcher"
+                  android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.settings.SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+
+        <activity android:name="Settings"
+                android:taskAffinity="com.android.settings"
+                android:label="@string/settings_label_launcher"
+                android:launchMode="singleTask">
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
         </activity>
